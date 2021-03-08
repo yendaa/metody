@@ -49,6 +49,16 @@ namespace metody
             }
             return vysledek;
         }
+        int CifLichSoucet(int a)
+        {
+            int soucet = 0;
+            while (a > 0)
+            {
+                if ((a % 10) % 2 != 0) soucet += a % 10;
+                a /= 10;
+            }
+            return soucet;
+        }
         bool prvocislo(int a)
         {
             if (a <= 1) return false;
@@ -73,6 +83,9 @@ namespace metody
 
             double x = Convert.ToDouble(textBox1.Text);
             label7.Text = faktorial(a).ToString();
+
+            int y = Convert.ToInt32(textBox1.Text);
+            label9.Text = CifLichSoucet(a).ToString();
 
             int z = Convert.ToInt32(textBox1.Text);
             label8.Text = prvocislo(a).ToString();
