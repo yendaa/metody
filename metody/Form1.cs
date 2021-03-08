@@ -49,6 +49,16 @@ namespace metody
             }
             return vysledek;
         }
+        bool prvocislo(int a)
+        {
+            if (a <= 1) return false;
+            if (a == 2) return true;
+            for (int i = 3; i < a; i++)
+            {
+                if (a % i == 0) return false;
+            }
+            return true;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             int a1 = Convert.ToInt32(textBox1.Text);
@@ -63,6 +73,9 @@ namespace metody
 
             double x = Convert.ToDouble(textBox1.Text);
             label7.Text = faktorial(a).ToString();
+
+            int z = Convert.ToInt32(textBox1.Text);
+            label8.Text = prvocislo(a).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
