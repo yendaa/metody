@@ -72,7 +72,7 @@ namespace metody
             label2.Text = (a + b).ToString();
             label3.Text = (a - b).ToString();
             label4.Text = (a * b).ToString();
-            label4.Text = (a / b).ToString();
+            label5.Text = (Convert.ToDouble(a) / Convert.ToDouble(b)).ToString();
         }
     }
 }
