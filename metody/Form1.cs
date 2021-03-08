@@ -20,6 +20,26 @@ namespace metody
         {
             return Math.Sqrt(Math.Pow(Math.Abs(a1 - a2), 2) + Math.Pow(Math.Abs(b1 - b2), 2));
         }
+        double mocnina(int a, int b)
+        {
+            double vysledek = 1;
+            if (b > 0)
+            {
+                for (int i = 0; i < b; i++)
+                {
+                    vysledek *= a;
+                }
+            }
+            else if (b < 0)
+            {
+                for (int i = 0; i > b; i--)
+                {
+                    vysledek /= a;
+                }
+            }
+            return vysledek;
+        }
+        
         private void button1_Click(object sender, EventArgs e)
         {
             int a1 = Convert.ToInt32(textBox1.Text);
@@ -27,6 +47,11 @@ namespace metody
             int a2 = Convert.ToInt32(textBox3.Text);
             int b2 = Convert.ToInt32(textBox4.Text);
             label1.Text = vzdalenost(a1, b1, a2, b2).ToString();
+
+            int a = Convert.ToInt32(textBox1.Text);
+            int b = Convert.ToInt32(textBox2.Text);
+            label6.Text = mocnina(a, b).ToString();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
