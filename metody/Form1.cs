@@ -35,6 +35,7 @@ namespace metody
             int b = Convert.ToInt32(textBox6.Text);
             label2.Text = (a + b).ToString();
             label3.Text = (a - b).ToString();
+            label4.Text = (a * b).ToString();
         }
     }
 }
