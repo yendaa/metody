@@ -28,5 +28,12 @@ namespace metody
             int b2 = Convert.ToInt32(textBox4.Text);
             label1.Text = vzdalenost(a1, b1, a2, b2).ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(textBox5.Text);
+            int b = Convert.ToInt32(textBox6.Text);
+            label2.Text = (a + b).ToString(); 
+        }
     }
 }
