@@ -39,7 +39,16 @@ namespace metody
             }
             return vysledek;
         }
-        
+        double faktorial(double a)
+        {
+            double vysledek = 1;
+            while (a > 0)
+            {
+                vysledek *= a;
+                a--;
+            }
+            return vysledek;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             int a1 = Convert.ToInt32(textBox1.Text);
@@ -52,6 +61,8 @@ namespace metody
             int b = Convert.ToInt32(textBox2.Text);
             label6.Text = mocnina(a, b).ToString();
 
+            double x = Convert.ToDouble(textBox1.Text);
+            label7.Text = faktorial(a).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
